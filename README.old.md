@@ -1,3 +1,0 @@
-# elif-personal-website
-
-hello
