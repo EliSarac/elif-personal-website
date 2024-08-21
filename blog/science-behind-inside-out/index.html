@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: light)"><link rel="icon" type="image/x-icon" href="/favicon-light.svg"><meta name="generator" content="Astro v4.14.2"><!-- Font preloads --><link rel="preload" href="/_astro/inter-latin-400-normal.BOOGhInR.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/inter-latin-600-normal.D273HNI0.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/lora-latin-400-normal.CvHVDnm4.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/lora-latin-600-normal.DUWh3m6k.woff2" as="font" type="font/woff2" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://astro-nano-demo.vercel.app/blog/science-behind-inside-out/"><!-- Primary Meta Tags --><title>The Science Behind Inside Out | Elif Saracoglu</title><meta name="title" content="The Science Behind Inside Out | Elif Saracoglu"><meta name="description" content="Neuropsychology of emotions in the movie &#34;Inside Out&#34;"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://astro-nano-demo.vercel.app/blog/science-behind-inside-out/"><meta property="og:title" content="The Science Behind Inside Out | Elif Saracoglu"><meta property="og:description" content="Neuropsychology of emotions in the movie &#34;Inside Out&#34;"><meta property="og:image" content="https://astro-nano-demo.vercel.app/nano.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://astro-nano-demo.vercel.app/blog/science-behind-inside-out/"><meta property="twitter:title" content="The Science Behind Inside Out | Elif Saracoglu"><meta property="twitter:description" content="Neuropsychology of emotions in the movie &#34;Inside Out&#34;"><meta property="twitter:image" content="https://astro-nano-demo.vercel.app/nano.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script>
+  function init() {
+    preloadTheme();
+    onScroll();
+    animate();
+
+    const backToTop = document.getElementById("back-to-top");
+    backToTop?.addEventListener("click", (event) => scrollToTop(event));
+
+    const backToPrev = document.getElementById("back-to-prev");
+    backToPrev?.addEventListener("click", () => window.history.back());
+
+    const lightThemeButton = document.getElementById("light-theme-button");
+    lightThemeButton?.addEventListener("click", () => {
+      localStorage.setItem("theme", "light");
+      toggleTheme(false);
+    });
+
+    const darkThemeButton = document.getElementById("dark-theme-button");
+    darkThemeButton?.addEventListener("click", () => {
+      localStorage.setItem("theme", "dark");
+      toggleTheme(true);
+    });
+
+    const systemThemeButton = document.getElementById("system-theme-button");
+    systemThemeButton?.addEventListener("click", () => {
+      localStorage.setItem("theme", "system");
+      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    });
+
+    window.matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", event => {
+        if (localStorage.theme === "system") {
+          toggleTheme(event.matches);
+        }
+      }
+    );
+
+    document.addEventListener("scroll", onScroll);
+  }
+
+  function animate() {
+    const animateElements = document.querySelectorAll(".animate");
+
+    animateElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add("show");
+      }, index * 150);
+    });
+  }
+
+  function onScroll() {
+    if (window.scrollY > 0) {
+      document.documentElement.classList.add("scrolled");
+    } else {
+      document.documentElement.classList.remove("scrolled");
+    }
+  }
+
+  function scrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+function toggleTheme(dark) {
+    const css = document.createElement("style");
+
+    css.appendChild(
+      document.createTextNode(
+        `* {
+             -webkit-transition: none !important;
+             -moz-transition: none !important;
+             -o-transition: none !important;
+             -ms-transition: none !important;
+             transition: none !important;
+          }
+        `,
+      )
+    );
+
+    document.head.appendChild(css);
+
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+  window.getComputedStyle(css).opacity;
+    document.head.removeChild(css);
+  }
+
+  function preloadTheme() {
+    const userTheme = localStorage.theme;
+
+    if (userTheme === "light" || userTheme === "dark") {
+      toggleTheme(userTheme === "dark");
+    } else {
+      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => init());
+  document.addEventListener("astro:after-swap", () => init());
+  preloadTheme();
+</script><link rel="stylesheet" href="/_astro/_slug_.D2ptPmum.css"><script type="module" src="/_astro/hoisted.BZ3lSpnN.js"></script></head> <body> <header> <div class="mx-auto max-w-screen-sm px-5">  <div class="flex flex-wrap gap-y-2 justify-between"> <a href="/" target="_self" class="inline-block decoration-black/15 dark:decoration-white/30 hover:decoration-black/25 hover:dark:decoration-white/50 text-current hover:text-black hover:dark:text-white transition-colors duration-300 ease-in-out">  <div class="font-semibold"> Elif Saracoglu </div>  </a> <nav class="flex gap-1"> <a href="/blog" target="_self" class="inline-block decoration-black/15 dark:decoration-white/30 hover:decoration-black/25 hover:dark:decoration-white/50 text-current hover:text-black hover:dark:text-white transition-colors duration-300 ease-in-out underline underline-offset-2">  blog  </a> </nav> </div>  </div> </header> <main>  <div class="mx-auto max-w-screen-sm px-5">  <div class="animate"> <a href="/blog" class="relative group w-fit flex pl-7 pr-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="absolute top-1/2 left-2 -translate-y-1/2 size-4 stroke-2 fill-none stroke-current"> <line x1="5" y1="12" x2="19" y2="12" class="translate-x-2 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></line> <polyline points="12 5 5 12 12 19" class="translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></polyline> </svg> <div class="text-sm"> 
+Back to blog
+ </div> </a> </div> <div class="space-y-1 my-10"> <div class="animate flex items-center gap-1.5"> <div class="font-base text-sm"> <time datetime="2024-08-22T00:00:00.000Z"> Aug 22, 2024 </time> </div>
+&bull;
+<div class="font-base text-sm"> 5 min read </div> </div> <div class="animate text-2xl font-semibold text-black dark:text-white"> The Science Behind Inside Out </div> </div> <article class="animate"> <p>With Inside Out 2 steaming in the theaters, I take the opportunity to talk about how psychologists and neuroscientists model human emotions. Let’s get started!</p>
+<p><img src="/_astro/inside-out.GnHL8uwx_1KjwYy.webp" alt="&#34;Inside out scene&#34;" width="1024" height="442" loading="lazy" decoding="async"></p>
+<p>Disney-Pixar’s Inside Out offers a fascinating glimpse into the science of human emotions and is one of my favorite animated films. The emotions (joy, sadness, fear, disgust, anger, fear; envy, embarrassment, ennui) are the main characters of the film, but where do they come from? What is the science behind these animated emotions? Let’s take a look at Paul Ekman’s model of emotions.</p>
+<p>Psychologist Paul Ekman is renowned for his work on the universality of emotions and facial expressions. His research identifies six basic emotions that are universally recognized across cultures: happiness, sadness, fear, anger, surprise, and disgust. These core 6 emotions are hardwired into our brains and are expressed through specific facial expressions and physiological responses. Consequently, creators of Inside Out got in touch with the Paul Ekman team to talk about their idea of portraying emotions in a movie. And that’s how it all started.</p>
+<p><img src="/_astro/emotions.Ct0c9qb__Z1izb3z.webp" alt="&#34;Experssions&#34;" width="1476" height="1426" loading="lazy" decoding="async"></p>
+<blockquote>
+<p>Everyone knows what an emotion is, until asked to give a definition.</p>
+<p>Fehr and Russell [1984]</p>
+</blockquote>
+<p>What is emotion? Many people would describe emotion as a ‘feeling’, ‘mood’ or ‘affective state’ of a person. But feeling refers to the experiential part of an emotion, while affect is a broader concept about someone’s well-being, and mood is a temporary state of being. In fact, emotion is more complex than the definitions we would come up with. Gross and Thompson (2007) classify emotions as typically having specific objects and triggering actions related to those objects. For example, anger is directed at a person or thing and motivates action to remove the source of irritation. Emotions can be either positive or negative; for example, anger at being scolded is negative, whereas happiness at winning a game is positive (Steunebrink, 2010).</p>
+<p>So, if you’ve seen either of the Inside Out movies, you’ll notice that these characteristics of emotions closely align with how emotions are portrayed in the films. In the second film, however, we encounter more than the original six core emotions. As the main character grows up, she experiences more nuanced emotions like anxiety, envy, embarrassment, ennui, and nostalgia. Emotions become increasingly complex with age and new experiences, and we express them through both language and facial expressions. Google’s <em>GoEmotions</em> research can guide you in understanding how different emotions are mapped through language.</p>
+<div class="mt-12"></div>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;anger&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;anger&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;annoyance&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;disapproval&quot;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;disgust&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;disgust&quot;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;fear&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;fear&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;nervousness&quot;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;joy&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;joy&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;amusement&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;approval&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;excitement&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;gratitude&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;love&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;optimism&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;relief&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;pride&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;admiration&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;desire&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;caring&quot;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;sadness&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;sadness&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;disappointment&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;embarrassment&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;grief&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;remorse&quot;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;surprise&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;surprise&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;realization&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;confusion&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;curiosity&quot;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span></code></pre>
+<div class="text-center italic"><p>from goemotions dataset of Ekman mapping of emotions</p></div>
+<h3 id="we-are-all-guided-by-our-emotions">We are all guided by our emotions</h3>
+<p>There is a common belief in society that being emotional is the opposite of being rational. However, is this really the case? Neuropsychological evidence shows that emotions are essential for decision-making. This necessity is highlighted by research on patients with frontal lobe damage. (The frontal lobe, especially the prefrontal cortex, is known to be involved in the regulation and processing of emotions.) Patients with frontal lobe damage experience poor decision-making and struggle with social judgment due to their inability to feel emotions, which impairs their ability to evaluate outcomes and avoid socially damaging choices.</p>
+<p><img src="/_astro/frontal-lobe.BzCe-YQ8_yUk7k.webp" alt="" width="512" height="330" loading="lazy" decoding="async"></p>
+<p>For example, studies show that when we are angry, we become more sensitive to what is unfair, which helps us to take action to remedy the injustice. Thus, emotions are integral to making sensible decisions, and make moral judgements of right and wrong. This is also reflected in the film, as her emotions help her to understand the situation she finds herself in:</p>
+<blockquote>
+<p>“Sadness gradually takes control of Riley’s thought processes about the changes she is going through. This is most evident when Sadness adds blue hues to the images of Riley’s memories of her life in Minnesota.” (Keltner, 2015)</p>
+</blockquote>
+<p>Scientific research shows that our present emotions influence our memories of the past. In the film, this crucial role is embodied by Sadness, which helps Riley acknowledge her current changes and losses, thereby setting the stage for her to develop new aspects of her identity. So, <em>“emotions organize - rather than disturb”</em>, contrary to the notion that they are purely irrational.</p>
+<p>I hope this short essay provides you with a basic understanding of how emotions work and the foundation of the film. The next time you watch Inside Out, think about how each character embodies a particular emotion and how those emotions align with Paul Ekman’s scientific research. Our inner world and our linguistic and facial expressions of emotions are complex and rich, and I think Inside Out does a good job of reflecting the multimodality of emotions to the audience.</p>
+<h4 id="references">References:</h4>
+<ul>
+<li><a href="https://disney.fandom.com/wiki/The_Emotions">https://disney.fandom.com/wiki/The_Emotions</a></li>
+<li><a href="https://www.paulekman.com/blog/the-science-of-inside-out/">https://www.paulekman.com/blog/the-science-of-inside-out/</a></li>
+<li><a href="https://www.envisionyourevolution.com/evolution-emotion/paul-ekman-theory-of-emotion/2149/">https://www.envisionyourevolution.com/evolution-emotion/paul-ekman-theory-of-emotion/2149/</a></li>
+<li><a href="https://github.com/google-research/google-research/tree/master/goemotions">https://github.com/google-research/google-research/tree/master/goemotions</a></li>
+<li><a href="https://dspace.library.uu.nl/handle/1874/43581">https://dspace.library.uu.nl/handle/1874/43581</a></li>
+<li><a href="https://theory.labster.com/frontal-lobe/">https://theory.labster.com/frontal-lobe/</a></li>
+</ul>
+<p><strong>tags:</strong> psychology, linguistics, neuropsychology, emotions, insideout</p> </article>  </div>  </main> <footer class="animate"> <div class="mx-auto max-w-screen-sm px-5">  <div class="relative"> <div class="absolute right-0 -top-20"> <button id="back-to-top" class="relative group w-fit flex pl-8 pr-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="absolute top-1/2 left-2 -translate-y-1/2 size-4 stroke-2 fill-none stroke-current rotate-90"> <line x1="5" y1="12" x2="19" y2="12" class="translate-x-2 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></line> <polyline points="12 5 5 12 12 19" class="translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></polyline> </svg> <div class="text-sm">
+Back to top
+</div> </button> </div> </div> <div class="flex justify-between items-center"> <div>
+&copy; 2024 | Elif Saracoglu </div> <div class="flex flex-wrap gap-1 items-center"> <button id="light-theme-button" aria-label="Light theme" class="group size-8 flex items-center justify-center rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"> <circle cx="12" cy="12" r="5"></circle> <line x1="12" y1="1" x2="12" y2="3"></line> <line x1="12" y1="21" x2="12" y2="23"></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line> <line x1="1" y1="12" x2="3" y2="12"></line> <line x1="21" y1="12" x2="23" y2="12"></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line> </svg> </button> <button id="dark-theme-button" aria-label="Dark theme" class="group size-8 flex items-center justify-center rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> <button id="system-theme-button" aria-label="System theme" class="group size-8 flex items-center justify-center rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"> <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect> <line x1="8" y1="21" x2="16" y2="21"></line> <line x1="12" y1="17" x2="12" y2="21"></line> </svg> </button> </div> </div>  </div> </footer> </body></html>
