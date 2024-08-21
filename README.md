@@ -1,4 +1,4 @@
-# Elif Saracoglu personal website
+# Elif Saracoglu's personal website
 
 Hello welcome to my website
 
